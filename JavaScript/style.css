@@ -22,11 +22,6 @@ html {
     margin-left: -3px;
 }
 
-.under-logo {
-
-}
-
-
 .upper-row {
     margin-top: -5%;
     display: flex;
@@ -81,9 +76,250 @@ html {
     font-size: x-large;
     color: grey;
     position: fixed;
+    z-index: 9;
 }
 
 .leftside-fix-links > li{
     list-style-type: none;
 } 
 
+.pic-est {
+    position: relative;
+}
+
+.pics-rotation {
+    width: 80%;
+    height: 250px;
+    margin: 30px 0px 0px 110px;
+    z-index: 2;
+}
+
+
+.first-img > img {
+    width: 750px;
+    height: 380px;
+    object-fit: cover;
+}
+
+.get-estimate {
+    margin: 90px 0 50px 120px;
+    font-size: 10px;
+    display: inline-block;
+    z-index: 2;
+    position: absolute;
+}
+
+.bg-estimate {
+    background-color: rgb(61, 61, 61);
+    padding: 38px 30px 38px 38px;
+    height: 90px;
+    margin-left: 95px;
+    width: 550px;
+    border-radius: 10px;
+}
+
+.calender {
+    background-color: transparent;
+    width: 120px;
+    border: none;
+    color: white;
+    padding: 10px 20px 10px 10px;
+    font-size: 12px;
+    border-bottom: 2px solid rgb(129, 129, 129);
+    outline: none;
+}
+
+.bg-estimate > input {
+    width: 300px;
+    font-size: 14px;
+    margin-top: -20px;
+    text-align: start;
+    justify-content: start;
+}
+
+.bg-estimate > button {
+    margin: -20px 19px 20px 60px;
+}
+
+.estimation-btn {
+    border: none;
+    background-color: rgb(233, 192, 57);
+    padding: 8px 20px;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    text-wrap: nowrap;
+    border-radius: 8px;
+}
+
+ /* google review */
+.google-review {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50%;
+    margin-left: 15%;
+    margin-bottom: 50px;
+}
+
+.fixed-icon {
+    flex: 1;
+}
+
+.fixed-icon > img {
+    height: 200px; 
+    width: 200px;
+    margin: 0 0 0 -20px;
+}
+
+/* info */
+
+.moving-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* gap: 20px; */
+    margin-top: 30%;
+    margin-left: 50px;
+}
+
+.left-side-info > p {
+    line-height: 20px;
+    font-size: 12px;
+    width: 320px;
+    margin: 20px 0 0 50px;
+}
+
+.right-2-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px;
+    /* height: 490px; */
+    width: 380px;
+}
+
+.right-2-col > div > .info-para {
+    font-size: 10px;
+    line-height: 12px;
+}
+
+.right-2-col > div {
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px rgb(180, 180, 180);
+}
+
+.top-left > .more-info {
+    margin-top: 44px;
+}
+.bottom-left > .more-info {
+    margin: 60px 0 0 0;
+}
+
+.bottom-right > .more-info{
+    margin: 60px 0 0 0;
+}
+
+.more-info {
+    margin: 30px 0 -10px 0;
+    font-size: 12px;
+    font-weight: 700;
+    color: rgb(233, 192, 57);
+    padding: 0px 0px 10px 0px;
+    border-bottom: 1px solid rgb(233, 192, 57);
+    width: 80px;
+    cursor: pointer;
+}
+
+.right-2-col > div:hover {
+    box-shadow: 2px 2px 6px rgb(233, 192, 57);
+}
+
+.inbetween-title {
+    margin: 80px 0 10px 300px;
+}
+
+.bg-img-text {
+    background-image: url('landmarks2_291e6cdb-3e68-4f09-8ba1-34ac20ab9b80.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 380px;
+    width: 100%;
+    z-index: 999;
+    margin: 40px -40px;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    color: white;
+}
+.bg-img-text > div {
+    background-color: rgb(184, 152, 46);
+    opacity: 0.2;
+}
+
+
+
+.heading-bg-text {
+    font-weight: 900;
+}
+
+.info-data {
+    line-height: 15px;
+}
+
+.more-data {
+
+}
+
+/* google review  */
+
+.reviews {
+    flex: 2;
+    height: 300px;
+    margin: 40px 30px -20px 0px;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 2px rgba(0,0,0,0.3);
+    font-size: 12px;
+}
+
+.top-div > .second, .third, .forth, .fifth {
+    margin-top: 40px;
+}
+
+.top-div > h5,p {
+    line-height: 3px;
+}
+
+.stars {
+    color: gold;
+}
+
+.middle-div > p,button {
+    display: inline-block;
+}
+
+.days-older, .btn-new {
+    margin-left: 5px;
+}
+
+.btn-new {
+    font-size: 8px;
+    color: #000;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.like {
+    margin-top: 10px;
+    color: rgb(29, 106, 238)
+}
+
+.like > p > i {
+    font-size: 20px;
+    margin-right: 5px;
+}
