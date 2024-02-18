@@ -48,45 +48,221 @@ html {
     text-wrap: nowrap;
 }
 
-.lower-row {
+/* .lower-row {
     display: inline-flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     margin-left: 220px;
 
-}
+} */
 
-.navbar-link {
-    color: black;
-    text-decoration: none;
-    font-size: 15px;
-    /* overflow: hidden; */
-    padding: 0 15px;
+
+ /* navbar  */
+.menu {
+    padding: 2px;
+    width: 100%;
+    max-width: 100%;
+    height: 40px;
     margin-top: -20px;
-    margin-right: 10px;
-    text-wrap: nowrap;
-    cursor: pointer;
-    position: relative;
 }
 
-.navbar-link:hover {
-    color: rgb(233, 192, 57);
-    text-decoration: underline;
+.menu .container {
+    padding: 5px 10px 10px 10px;
 }
 
-.navbar-link:hover + .additional-info {
+.inner-menu > li {
+    max-width: 80px; 
+    width: 100%;
+}
+
+.inner-menu {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    list-style: none;
+}
+
+
+
+ul li a {
+    text-decoration: none;
+    color: black;
+    /* background-color: rgb(250, 241, 211); */
     display: block;
-  }
-
-/* hover effect using javascript with navbar  */
-.additional-info {
-    display: none;
-    background-color: rgb(251, 246, 230);
-    /* margin: 10px 0 0 0 ; */
-    padding: 10px; 
-    position: absolute;
+    padding: 2px;
+    text-align: center;
+    text-wrap: nowrap;
 }
+
+ul li:hover ul.dropdown {
+    display: block;
+    animation-name: mainnav;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    background-color: rgb(250, 241, 211);
+} 
+
+ul li ul.dropdown {
+    display: none;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* mainnav animation  */
+
+@keyframes mainnav {
+    0% {
+        height: 0px;
+        background-color: transparent;
+    }
+    
+    100% {
+        height: 100px;
+        background-color: rgb(250, 241, 211);
+    }
+}
+
+ul li ul.dropdown li {
+    margin: 10px 0;
+}
+
+.menu ul li ul li:first-child {
+    animation-name: navmain;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+}
+
+.menu ul li ul li:nth-child(2) {
+    animation-name: navanime;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-delay: 0.1s;
+    animation-timing-function: linear;
+}
+
+.menu ul li ul li:nth-child(3) {
+    animation-name: navanime;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-delay: 0.2s;
+    animation-timing-function: linear;
+}
+
+.menu ul li ul li:nth-child(4) {
+    animation-name: navanime;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-delay: 0.3s;
+    animation-timing-function: linear;
+}
+
+.menu ul li ul li:nth-child(5) {
+    animation-name: navanime;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-delay: 0.3s;
+    animation-timing-function: linear;
+}
+
+.menu ul li ul li:nth-child(6) {
+    animation-name: navanime;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-delay: 0.4s;
+    animation-timing-function: linear;
+}
+
+.menu ul li ul li:nth-child(7) {
+    animation-name: navanime;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-delay: 0.5s;
+    animation-timing-function: linear;
+}
+
+.menu ul li ul li:nth-child(8) {
+    animation-name: navanime;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-delay: 0.6s;
+    animation-timing-function: linear;
+}
+
+.menu ul li ul li:nth-child(9) {
+    animation-name: navanime;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-delay: 0.7s;
+    animation-timing-function: linear;
+}
+
+.menu ul li ul li:nth-child(10) {
+    animation-name: navanime;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-delay: 0.8s;
+    animation-timing-function: linear;
+}
+
+.menu {
+    position: relative;
+    background: rgb(233, 192, 57);
+    background-blend-mode: overlay;
+    border-radius: 22px 0 22px 0;
+    margin-left: 240px;
+}
+
+/* navanime animation  */
+@keyframes navanime {
+    0% {
+        transform: rotateY(180deg);
+    }
+    /* 100% {
+        transform: rotateY(180deg);
+
+    } */
+}
+
+ul li a {
+    transition: all 0.2s linear;
+    position: relative;
+    z-index: 10;
+    font-size: 12px;
+    background-color: rgb(241, 230, 192);
+}
+
+ul li > a:after {
+    content: '';
+    background-color: rgb(241, 230, 192);
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0%;
+    height: 0%;
+    transition: all 0.3s linear;
+    z-index: -1;
+}
+
+ul li:hover > a:after {
+    color: black;
+    content: '';
+    background-color: rgb(241, 230, 192);
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%; 
+}
+
+
+/* sidebar  */
 
 .sidebar {
     margin-left: -50px;
