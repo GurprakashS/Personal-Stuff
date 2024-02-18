@@ -5,6 +5,7 @@ html {
 .navbar {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .container-fluid {
@@ -31,7 +32,7 @@ html {
 }
 
 .upper-row > button {
-    background-color: rgb(234, 208, 122);
+    background-color: rgb(233, 192, 57);
     margin: 0 2%;
     padding: -2px;
     font-size: 60%;
@@ -48,26 +49,43 @@ html {
 }
 
 .lower-row {
-    display: flex;
+    display: inline-flex;
     justify-content: center;
+    align-items: center;
     cursor: pointer;
     margin-left: 220px;
 
 }
 
-.lower-row > a {
+.navbar-link {
     color: black;
     text-decoration: none;
-    font-size: 90%;
-    overflow: hidden;
+    font-size: 15px;
+    /* overflow: hidden; */
     padding: 0 15px;
     margin-top: -20px;
+    margin-right: 10px;
     text-wrap: nowrap;
+    cursor: pointer;
+    position: relative;
 }
 
-.lower-row > a:hover {
+.navbar-link:hover {
     color: rgb(233, 192, 57);
     text-decoration: underline;
+}
+
+.navbar-link:hover + .additional-info {
+    display: block;
+  }
+
+/* hover effect using javascript with navbar  */
+.additional-info {
+    display: none;
+    background-color: rgb(251, 246, 230);
+    /* margin: 10px 0 0 0 ; */
+    padding: 10px; 
+    position: absolute;
 }
 
 .sidebar {
@@ -239,26 +257,50 @@ html {
     margin: 80px 0 10px 300px;
 }
 
+.bg-img-text:before {
+    content: "";
+    position: absolute;
+    background: rgba(0,0,0,0.3);
+    z-index: 98;
+}
+
 .bg-img-text {
-    background-image: url('landmarks2_291e6cdb-3e68-4f09-8ba1-34ac20ab9b80.jpg');
+    background-image: url('city_of_vancouver_cover.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 380px;
-    width: 100%;
-    z-index: 999;
-    margin: 40px -40px;
-    position: absolute;
+    height: 420px;
+    width: 106%;
+    z-index: 99;
+    margin: 40px -40px 40px -40px;
+    color: white;
+    position: relative;
+}
+
+.second-layer {
+    background-color: rgba(41, 33, 5, 0.6);
+    width: 100.2%;
+    height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    color: white;
-}
-.bg-img-text > div {
-    background-color: rgb(184, 152, 46);
-    opacity: 0.2;
+    opacity: 0.8;
+    position: relative;  
+    align-items: center;  
+    z-index: 100;
 }
 
+.second-layer > div {
+    padding: 34px 40px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 101;
+}
 
+.second-layer > .col-second {
+    background: rgba(45, 42, 34, 0.8);
+}
 
 .heading-bg-text {
     font-weight: 900;
@@ -266,6 +308,34 @@ html {
 
 .info-data {
     line-height: 15px;
+    font-size: 12px;
+}
+
+.col-first > .first-para {
+    margin: 0 50px 50px 50px;
+}
+
+.col-second > .first-para {
+    margin: 0 50px 50px 50px;
+}
+
+.col-third > .first-para {
+    margin: 0 50px 50px 50px;
+}
+
+.first-para {
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20%;
+}
+
+.img > .first-para img{
+    max-height: 40px;
+    max-width: 40px;
+    margin: 0px -40px;
 }
 
 .more-data {
@@ -274,10 +344,18 @@ html {
 
 /* google review  */
 
+.google-review{
+    margin-top: 120px;
+}
+
+.fixed-icon > img{
+    margin: 10px 40px 20px -50px;
+}
+
 .reviews {
     flex: 2;
     height: 300px;
-    margin: 40px 30px -20px 0px;
+    margin: -40px 30px -20px 0px;
     align-items: center;
     justify-content: center;
     overflow: auto;
@@ -322,4 +400,99 @@ html {
 .like > p > i {
     font-size: 20px;
     margin-right: 5px;
+}
+
+/* faq  */
+.faq {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-content: center;
+    align-items: center;
+    margin: 90px 0 40px 50px;
+    background-color: lightblue;
+}
+
+.questions {
+    background-color: lightcoral;
+    /* margin: 0 0 0 -260px; */
+}
+
+
+.faq-heading {
+    display: inline-flex;
+    justify-content: left;
+    align-items: start;
+    /* margin: 10px 0px 10px -60px; */
+    padding: 5px 60px;
+}
+
+.h3-faq{
+    margin: 10px 0 10px -50px;
+}
+
+.a-faq {
+    font-size: 12px;
+    margin: 18px 0px 0px 290px;
+    text-decoration: none;
+    color: rgb(233, 192, 57);
+    border-bottom: 1px solid rgb(233, 192, 57);
+    font-weight: 600;
+}
+
+.a-faq > img {
+    margin: 0 0 0 10px;
+}
+
+.questions > .ques {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 10px 0 0 10px;
+    width: 430px;
+    border: none;
+    box-shadow: 1px 1px 5px rgba(143, 115, 21, 0.4),
+                inset 1px 1px 2px rgba(55, 55, 55, 0.4);
+    padding: 8px 1px 3px 15px; 
+}
+
+.ques > h6 {
+    font-weight: 500;
+    color: rgb(67, 66, 60);
+}
+
+.speed-meter > div {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.speed {
+    padding: 0 20px;
+}
+
+.speed > img{
+    border: 1px solid black;
+    border-radius: 50%; 
+    padding: 10px;
+    margin: 10px 5px 10px 5px;
+}
+
+.speed > h5, p {
+    display: block; 
+    padding: 10px;
+}
+
+.speed > h5 {
+    color: rgb(67, 66, 60);
+}
+
+.speed > p {
+    font-size: 11px;
+    text-wrap: nowrap;
+    margin: 30px 0 -25px -40px;
+}
+
+.sec-one {
+    margin: 0 20px 0 -10px;
+    padding: 0 10px 0 -10px;
 }
